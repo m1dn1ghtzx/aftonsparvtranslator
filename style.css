@@ -1,9 +1,22 @@
 body {
-  background: #111;
+  background: url('ikeasolarsystem.png') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #eee;
   font-family: monospace;
   text-align: center;
   padding: 2em;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 textarea {
